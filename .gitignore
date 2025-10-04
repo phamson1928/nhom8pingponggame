@@ -49,7 +49,6 @@ assets/test/
 # --- Network test dumps ---
 *.pcap
 *.dump
-generate_real_commits.sh
 
 # --- Misc ---
 *.zip
