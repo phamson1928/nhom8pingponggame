@@ -1,0 +1,57 @@
+# =====================================================
+# 🐍 Python & Pygame Project .gitignore
+# =====================================================
+
+# --- Virtual environment ---
+venv/
+env/
+ENV/
+.venv/
+
+# --- Byte-compiled / cache files ---
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- Logs & temporary files ---
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# --- System files ---
+.DS_Store
+Thumbs.db
+
+# --- IDE configs ---
+.vscode/
+.idea/
+*.code-workspace
+
+# --- Build / distribution ---
+build/
+dist/
+*.egg-info/
+.eggs/
+*.manifest
+*.spec
+
+# --- Media / assets (nếu có, tùy chỉnh nếu muốn giữ) ---
+assets/temp/
+assets/test/
+*.wav
+*.mp3
+*.ogg
+*.png
+*.jpg
+
+# --- Network test dumps ---
+*.pcap
+*.dump
+generate_real_commits.sh
+
+# --- Misc ---
+*.zip
+*.tar.gz
+*.7z
