@@ -1,19 +1,16 @@
 #!/usr/bin/env python3
-import socket
-import threading
+import socket, threading, random, time
 
-def handle_client(conn, addr):
-    print("Handling client", addr)
-    conn.close()
+WIDTH, HEIGHT = 800, 600
+
+class GameServer:
+    def __init__(self):
+        self.paddles = {0: 250, 1: 250}
+        self.ball = {"x": WIDTH//2, "y": HEIGHT//2}
 
 def main():
-    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    s.bind(("localhost", 8080))
-    s.listen(2)
-    print("Waiting for connections...")
-    while True:
-        conn, addr = s.accept()
-        threading.Thread(target=handle_client, args=(conn, addr), daemon=True).start()
+    gs = GameServer()
+    print("Initial state:", gs.ball)
 
 if __name__ == "__main__":
     main()
